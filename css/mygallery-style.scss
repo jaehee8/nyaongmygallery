@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//color
+$color-1 : #fff;
+$color-2 : #eee;
+$color-3 : #ccc;
+$color-4 : #767676;
+$color-5 : #484848;
+$color-6 : #333;
+$color-7 : #222;
+// width variable 
+$mobile-min-width : 320px;
+$tablet-min-width : 768px;
+$desktop-min-width : 1024px;
+$fullhd-min-width : 1920px;
+//헤더높이
+$height-1 : 6vh;
+//네비높이
+$height-2 :7vh;
+
+//mixin-----------------
+@mixin responsive-media-query ($min-width, $max-width) {
+  @media (min-width:$min-width) and (max-width:$max-width) {
+    @content;
+  }
+}
+@mixin size($width, $height, $background) { //size set
+  width: $width;
+  height: $height;
+  background-color: $background;
+}
+@mixin flex($justify, $align, $flex) { //flex set
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flex;
+}
+//네비 이미지 세팅
+@mixin navimg($url) {
+  background-image: $url;
+  background-position: 50% 50%;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+}
+//이미지 세팅
+@mixin img($url) {
+  background-image: $url;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//extand
+%font-weight {
+  font-weight: 100;
+}
+body {
+  background-color: #eee;
+  @include flex(center, center, column);
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+
+// my gallerfy 페이지
+@include responsive-media-query($desktop-min-width, $fullhd-min-width) {
+  #container { //pc에서 보이는 사이즈셋팅
+    @include size(40vw, 100vh, #eee);
+    & main {
+      @include size(inherit, min-content, #fcf);
+    }
+  }
+}
+@include responsive-media-query($tablet-min-width, $desktop-min-width) {
+  #container { //태블릿에서 보이는 사이즈 셋팅
+    @include size(60vw, 100vh, #eee);
+    & main {
+      @include size(inherit, min-content, #fcf);
+    }
+  }
+}
+@include responsive-media-query($mobile-min-width, $tablet-min-width) { //모바일에서 보이는 사이즈 셋팅
+  #container {
+    @include size(100vw, 100vh, #eee);
+    & main {
+      @include size(inherit, min-content, #fcf);
+    }
+  }
+}
+
+#container {
+  & header {
+    @include size(inherit, $height-1, $color-1);
+    @include flex(center, center, row);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1px solid #eee;
+    & > div {
+      @include size(90%, min-content, transparent);
+      @include flex(space-between, center, row);
+      & > div:nth-child(1) {
+        @include flex(center, center, row); 
+        // 이전버튼
+        & > a {
+          @include size(4vh, 4vh, transparent);
+          @include img(url(../images/btn-prev.png));
+          background-position: 0 50%;
+          background-size: auto 100%;
+        }
+        // my프로필이미지
+        & > div {
+          @include size(5vh, 5vh, transparent);
+          @include img(url(../images/Pepe_shimada3.jpeg));
+          border-radius: 50%;
+        }
+
+      }
+      & > div:nth-child(2) {
+        @include size(4vh, 4vh, transparent);
+        @include img(url(../images/btn-newplus.png));
+        border: 1px solid #333;
+        border-radius: 50%;
+      }
+    }
+  }
+}

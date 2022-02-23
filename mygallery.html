@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nyaong-mygallery</title>
+  <link rel="stylesheet" href="./css/mygallery-style.css">
+  <link rel="shortcut icon" href="./nyong-favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div id="loading">
+    <div></div>
+  </div>
+  <div id="container">
+    <header>
+      <div>
+        <div> 
+          <!-- 이전버튼 -->
+          <a href="https://jaehee8.github.io/nyaongmain/"></a>
+          <!-- my프로필이미지 -->
+          <div></div>
+        </div>
+        <!-- 작품추가버튼 -->
+        <div></div>
+      </div>
+    </header>
+    <nav>
+      <!--icon btn -->
+      <div>
+        <!--홈-->
+        <div></div>
+        <!-- 팔로우 -->
+        <div></div>
+        <!-- 트렌드및 검색 -->
+        <div></div>
+        <!-- 마이갤러리 -->
+        <div></div>
+        <!-- 메세지 -->
+        <div></div>
+      </div>
+    </nav>
+    <main>
+      <section>1</section>
+      <section>2</section>
+      <section>3</section>
+    </main>
+    
+  </div>
+</body>
+
+<script>
+  const loader = document.querySelector('#loading');
+  const html = document.querySelector('html');
+
+  html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
+
+  window.addEventListener('load', ()=>{
+
+    setTimeout(() => { // 로딩속도 구현
+    
+      loader.style.opacity = '0';
+		  html.style.overflow = 'auto'; //스크롤 방지 해제
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 400);
+        
+    }, 2000); //  로딩속도 구현
+
+  })
+  
+
+  // const box = document.querySelectorAll('main .box');
+  // console.dir(box);
+  // const img = document.querySelector('.img');
+//size set
+  function sizeSet(element, width, height, widthUnit, heightUnit) {
+    element.style.width = width + widthUnit;
+    element.style.height = height + heightUnit;
+  }
+  //main안에 box size 셋팅
+  
+  // for(let i=0; i<box.length; i++) {
+  //   sizeSet(box[i], 100, 100, 'vw', 'vw');
+  //   console.log(box[0].style.width);
+  // };
+  // sizeSet(img, 100, 100, '%','%');
+  
+  // (function(){
+  //   const main = document.querySelector('main');
+  //   let count = main.children.length;
+
+  //   const template = function(n) {
+  //     const docFrag = document.createDocumentFragment();
+  //     const div = document.createElement('div');
+  //     const img = document.createElement('div');
+  //     const text = document.createElement('div');
+
+  //     div.appendChild(img);
+  //     div.appendChild(text);
+  //     div.classList.add('box');
+  //     img.classList.add('img');
+  //     text.classList.add('text');
+  //     //?새로 생성된 요소에 사이즈가 적용되지 않는다.
+  //     docFrag.appendChild(div);
+  //     main.appendChild(docFrag);
+  //   };
+
+
+
+    //스크롤 바닥 감지
+    // window.onscroll = function(e) {
+    //   //window height + window scrollY 값이 document height보다 클 경우
+    //   if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+    //     count++;
+    //     template(count); //콘텐츠 추가
+    //     //여전히 비효율적으로 많은 div가 생성됨..악!
+    //   }
+    // };
+
+
+  // })();
+
+
+  
+  
+
+</script>
+</html>
