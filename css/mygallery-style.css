@@ -111,6 +111,10 @@ a {
   background-repeat: no-repeat;
   border-radius: 50%;
 }
+#container header > div > div:nth-child(1) > span {
+  color: #222;
+  font-size: 1rem;
+}
 #container header > div > div:nth-child(2) {
   width: 4vh;
   height: 4vh;

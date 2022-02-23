@@ -67,7 +67,7 @@ a {
 }
 
 
-// my gallerfy 페이지
+// artist 페이지
 @include responsive-media-query($desktop-min-width, $fullhd-min-width) {
   #container { //pc에서 보이는 사이즈셋팅
     @include size(40vw, 100vh, #eee);
@@ -106,18 +106,22 @@ a {
       @include flex(space-between, center, row);
       & > div:nth-child(1) {
         @include flex(center, center, row); 
-        // 이전버튼
-        & > a {
+        
+        & > a { // 이전버튼
           @include size(4vh, 4vh, transparent);
           @include img(url(../images/btn-prev.png));
           background-position: 0 50%;
           background-size: auto 100%;
         }
-        // my프로필이미지
-        & > div {
+        
+        & > div {  // 프로필이미지
           @include size(5vh, 5vh, transparent);
           @include img(url(../images/Pepe_shimada3.jpeg));
           border-radius: 50%;
+        }
+        & > span { //id
+          color: $color-7;
+          font-size: 1rem;
         }
 
       }
@@ -127,6 +131,7 @@ a {
         border: 1px solid #333;
         border-radius: 50%;
       }
+
     }
   }
 }
