@@ -18,7 +18,15 @@ a {
   color: #333;
 }
 
+li {
+  list-style: none;
+}
+
 @media (min-width: 1024px) and (max-width: 1920px) {
+  body {
+    font-size: 16px;
+  }
+
   #container {
     width: 40vw;
     height: 100vh;
@@ -33,6 +41,10 @@ a {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+
   #container {
     width: 60vw;
     height: 100vh;
@@ -47,6 +59,10 @@ a {
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
   #container {
     width: 100vw;
     height: 100vh;
@@ -62,7 +78,7 @@ a {
 }
 #container header {
   width: inherit;
-  height: 6vh;
+  height: 7vh;
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -113,7 +129,8 @@ a {
 }
 #container header > div > div:nth-child(1) > span {
   color: #222;
-  font-size: 1rem;
+  font-size: 1.4em;
+  margin-left: 5px;
 }
 #container header > div > div:nth-child(2) {
   width: 4vh;
@@ -123,7 +140,7 @@ a {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid #484848;
+  border: 1px solid #767676;
   border-radius: 50%;
 }
 #container nav {
@@ -184,4 +201,85 @@ a {
   background-position: 50% 50%;
   background-size: 90% auto;
   background-repeat: no-repeat;
+}
+#container main section:nth-child(1) {
+  width: inherit;
+  height: 12vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: transparent;
+  margin-top: 7vh;
+}
+#container main section:nth-child(1) > ul {
+  width: 45%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#container main section:nth-child(1) > ul li {
+  text-align: center;
+}
+#container main section:nth-child(1) > ul li > a {
+  width: 5vh;
+  height: 5vh;
+  background-color: transparent;
+  border: 1px solid #767676;
+  border-radius: 50%;
+}
+#container main section:nth-child(1) > ul li > span {
+  color: #333;
+  font-size: 1em;
+}
+#container main section:nth-child(1) > ul li:nth-child(1) a {
+  background-image: url(../images/artwork.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(1) > ul li:nth-child(2) a {
+  background-image: url(../images/soldout.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(1) > ul li:nth-child(3) a {
+  background-image: url(../images/follower.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(2) {
+  width: inherit;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#container main section:nth-child(2) > div {
+  width: 90%;
+  height: 100%;
+  background-color: transparent;
+}
+#container main section:nth-child(2) > div pre {
+  color: #333;
+  font-size: 1em;
+  padding: 1vh 0 5vh 0;
+}
+#container main section:nth-child(3) #artwork-wrap {
+  width: inherit;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: transparent;
 }/*# sourceMappingURL=mygallery-style.css.map */

@@ -17,7 +17,7 @@ $tablet-min-width : 768px;
 $desktop-min-width : 1024px;
 $fullhd-min-width : 1920px;
 //헤더높이
-$height-1 : 6vh;
+$height-1 : 7vh;
 //네비높이
 $height-2 :7vh;
 
@@ -65,19 +65,28 @@ a {
   text-decoration: none;
   color: #333;
 }
+li {
+  list-style: none;
+}
 
 
 // artist 페이지
-@include responsive-media-query($desktop-min-width, $fullhd-min-width) {
-  #container { //pc에서 보이는 사이즈셋팅
+@include responsive-media-query($desktop-min-width, $fullhd-min-width) {  //pc에서 보이는 사이즈셋팅
+  body {
+    font-size: 16px;
+  }
+  #container { 
     @include size(40vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
     }
   }
 }
-@include responsive-media-query($tablet-min-width, $desktop-min-width) {
-  #container { //태블릿에서 보이는 사이즈 셋팅
+@include responsive-media-query($tablet-min-width, $desktop-min-width) {  //태블릿에서 보이는 사이즈 셋팅
+  body {
+    font-size: 14px;
+  }
+  #container { 
     @include size(60vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
@@ -85,6 +94,9 @@ a {
   }
 }
 @include responsive-media-query($mobile-min-width, $tablet-min-width) { //모바일에서 보이는 사이즈 셋팅
+  body {
+    font-size: 12px;
+  }
   #container {
     @include size(100vw, 100vh, $color-2);
     & main {
@@ -121,14 +133,15 @@ a {
         }
         & > span { //id
           color: $color-7;
-          font-size: 1rem;
+          font-size: 1.4em;
+          margin-left: 5px;
         }
 
       }
-      & > div:nth-child(2) {
+      & > div:nth-child(2) { //새작품 올리기 버튼
         @include size(4vh, 4vh, transparent);
         @include img(url(../images/btn-newplus.png));
-        border: 1px solid $color-5;
+        border: 1px solid $color-4;
         border-radius: 50%;
       }
 
@@ -149,22 +162,82 @@ a {
         border-radius: 50%;
         // border: 1px solid red;
       }
-      & > div:nth-child(1) {
+      & > div:nth-child(1) { //홈
         background-color: $color-6;
         @include navimg(url(../images/icon-home.png));
       }
-      & > div:nth-child(2) {
+      & > div:nth-child(2) { //팔로우
         @include navimg(url(../images/icon-follow.png));
       }
-      & > div:nth-child(3) {
+      & > div:nth-child(3) { //트랜드
         @include navimg(url(../images/icon-trand.png));
       }
-      & > div:nth-child(4) {
+      & > div:nth-child(4) { //마이갤러리
         @include navimg(url(../images/icon-my-gallery.png));
       }
-      & > div:nth-child(5) {
+      & > div:nth-child(5) { //메세지
         @include navimg(url(../images/icon-message.png));
       }
     }
-  }  
+  }
+
+  & main {
+    & section:nth-child(1) {
+      @include size(inherit, 12vh, $color-1);
+      @include flex(center, center, transparent);
+      // border: 1px solid red;
+      margin-top: $height-1;
+      & > ul {
+        @include size(45%, min-content, transparent);
+        @include flex(space-between, center, row);
+        & li {
+          text-align: center;
+          & > a {
+            @include size(5vh, 5vh, transparent);
+            border: 1px solid $color-4;
+            border-radius: 50%;
+          }
+          & > span {
+            color: $color-6;
+            font-size: 1em;
+          }
+        }
+        & li:nth-child(1) { //작품
+          & a {
+            @include img(url(../images/artwork.png));
+          }
+        }
+        & li:nth-child(2) { //솔드아웃
+          & a {
+            @include img(url(../images/soldout.png));
+          }
+        }
+        & li:nth-child(3) { //팔로워
+          & a {
+            @include img(url(../images/follower.png));
+          }
+        }
+      }
+    }
+    & section:nth-child(2) {
+      @include size(inherit, min-content, $color-1);
+      @include flex(center, center, row);
+      // border: 1px solid red;
+      & > div {
+        @include size(90%, 100%, transparent);
+        & pre {
+          color: $color-6;
+          font-size: 1em;
+          padding: 1vh 0 5vh 0;
+        }
+      }
+      
+    }
+    & section:nth-child(3) {
+      & #artwork-wrap {
+        @include size(inherit, min-content, transparent);
+      }
+    }
+  }
+
 }
