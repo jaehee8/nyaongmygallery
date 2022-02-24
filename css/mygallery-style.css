@@ -39,6 +39,11 @@ li {
     height: min-content;
     background-color: #fcf;
   }
+  #container main > section:nth-child(3) > .artwork-page1 {
+    width: inherit;
+    height: 53.3333vw;
+    background-color: transparent;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   body {
@@ -57,6 +62,11 @@ li {
     height: min-content;
     background-color: #fcf;
   }
+  #container main > section:nth-child(3) > .artwork-page1 {
+    width: inherit;
+    height: 80vw;
+    background-color: transparent;
+  }
 }
 @media (min-width: 320px) and (max-width: 768px) {
   body {
@@ -74,6 +84,11 @@ li {
     height: -moz-min-content;
     height: min-content;
     background-color: #fcf;
+  }
+  #container main > section:nth-child(3) > .artwork-page1 {
+    width: 100vw;
+    height: 133.3333vw;
+    background-color: transparent;
   }
 }
 #container header {
@@ -276,10 +291,23 @@ li {
   font-size: 1em;
   padding: 1vh 0 5vh 0;
 }
-#container main section:nth-child(3) #artwork-wrap {
+#container main section:nth-child(3) {
   width: inherit;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
-  background-color: transparent;
+  background-color: #fff;
+}
+#container main section:nth-child(3) .artwork-page1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+#container main section:nth-child(3) .artwork-page1 > li {
+  background-color: #cfc;
+  margin-right: 0.5vw;
+  margin-bottom: 0.5vw;
+}
+#container main section:nth-child(3) .artwork-page1 > li:nth-child(3n) {
+  margin-right: 0;
 }/*# sourceMappingURL=mygallery-style.css.map */

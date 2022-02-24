@@ -79,6 +79,11 @@ li {
     @include size(40vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
+      & > section:nth-child(3) {
+        & > .artwork-page1 {
+          @include size(inherit, 53.3333vw, transparent);
+        }
+      }
     }
   }
 }
@@ -90,6 +95,11 @@ li {
     @include size(60vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
+      & > section:nth-child(3) {
+        & > .artwork-page1 {
+          @include size(inherit, 80vw, transparent);
+        }
+      }
     }
   }
 }
@@ -101,6 +111,11 @@ li {
     @include size(100vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
+      & > section:nth-child(3) {
+        & > .artwork-page1 {
+          @include size(100vw, 133.3333vw, transparent);
+        }
+      }
     }
   }
 }
@@ -182,7 +197,7 @@ li {
   }
 
   & main {
-    & section:nth-child(1) {
+    & section:nth-child(1) { //작품, 솔드아웃, 팔로워 수
       @include size(inherit, 12vh, $color-1);
       @include flex(center, center, transparent);
       // border: 1px solid red;
@@ -219,7 +234,7 @@ li {
         }
       }
     }
-    & section:nth-child(2) {
+    & section:nth-child(2) { //아티스트 소개
       @include size(inherit, min-content, $color-1);
       @include flex(center, center, row);
       // border: 1px solid red;
@@ -234,8 +249,22 @@ li {
       
     }
     & section:nth-child(3) {
-      & #artwork-wrap {
-        @include size(inherit, min-content, transparent);
+      @include size(inherit, min-content, $color-1);
+      // @include flex(center, center, row);
+      & .artwork-page1 {
+        // @include size(inherit, min-content, transparent);
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+        & > li {
+          background-color: #cfc;
+          margin-right: .5vw;
+          margin-bottom: .5vw;
+          // box-sizing: ;
+        }
+        & > li:nth-child(3n) {
+          margin-right: 0;
+        }
       }
     }
   }
