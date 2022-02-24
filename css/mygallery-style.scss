@@ -57,7 +57,7 @@ $height-2 :7vh;
   font-weight: 100;
 }
 body {
-  background-color: #eee;
+  background-color: $color-2s;
   @include flex(center, center, column);
 }
 a {
@@ -70,7 +70,7 @@ a {
 // artist 페이지
 @include responsive-media-query($desktop-min-width, $fullhd-min-width) {
   #container { //pc에서 보이는 사이즈셋팅
-    @include size(40vw, 100vh, #eee);
+    @include size(40vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
     }
@@ -78,7 +78,7 @@ a {
 }
 @include responsive-media-query($tablet-min-width, $desktop-min-width) {
   #container { //태블릿에서 보이는 사이즈 셋팅
-    @include size(60vw, 100vh, #eee);
+    @include size(60vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
     }
@@ -86,7 +86,7 @@ a {
 }
 @include responsive-media-query($mobile-min-width, $tablet-min-width) { //모바일에서 보이는 사이즈 셋팅
   #container {
-    @include size(100vw, 100vh, #eee);
+    @include size(100vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
     }
@@ -100,7 +100,7 @@ a {
     position: fixed;
     top: 0;
     z-index: 1;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid $color-2;
     & > div {
       @include size(90%, min-content, transparent);
       @include flex(space-between, center, row);
@@ -128,7 +128,7 @@ a {
       & > div:nth-child(2) {
         @include size(4vh, 4vh, transparent);
         @include img(url(../images/btn-newplus.png));
-        border: 1px solid #333;
+        border: 1px solid $color-5;
         border-radius: 50%;
       }
 
