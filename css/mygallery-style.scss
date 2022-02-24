@@ -57,7 +57,7 @@ $height-2 :7vh;
   font-weight: 100;
 }
 body {
-  background-color: $color-2s;
+  background-color: $color-2;
   @include flex(center, center, column);
 }
 a {
@@ -134,4 +134,37 @@ a {
 
     }
   }
+  & nav {
+    @include size(inherit, $height-2, $color-1);
+    @include flex(center, center, row);
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    border-top: 1px solid #eee;
+    & > div {
+      @include size(90%, inherit, transparent);
+      @include flex(space-between, center, row);
+      & > div {
+        @include size(5vh, 5vh, $color-1);
+        border-radius: 50%;
+        // border: 1px solid red;
+      }
+      & > div:nth-child(1) {
+        background-color: $color-6;
+        @include navimg(url(../images/icon-home.png));
+      }
+      & > div:nth-child(2) {
+        @include navimg(url(../images/icon-follow.png));
+      }
+      & > div:nth-child(3) {
+        @include navimg(url(../images/icon-trand.png));
+      }
+      & > div:nth-child(4) {
+        @include navimg(url(../images/icon-my-gallery.png));
+      }
+      & > div:nth-child(5) {
+        @include navimg(url(../images/icon-message.png));
+      }
+    }
+  }  
 }

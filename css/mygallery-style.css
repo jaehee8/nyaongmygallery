@@ -125,4 +125,63 @@ a {
   background-repeat: no-repeat;
   border: 1px solid #484848;
   border-radius: 50%;
+}
+#container nav {
+  width: inherit;
+  height: 7vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  border-top: 1px solid #eee;
+}
+#container nav > div {
+  width: 90%;
+  height: inherit;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#container nav > div > div {
+  width: 5vh;
+  height: 5vh;
+  background-color: #fff;
+  border-radius: 50%;
+}
+#container nav > div > div:nth-child(1) {
+  background-color: #333;
+  background-image: url(../images/icon-home.png);
+  background-position: 50% 50%;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+}
+#container nav > div > div:nth-child(2) {
+  background-image: url(../images/icon-follow.png);
+  background-position: 50% 50%;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+}
+#container nav > div > div:nth-child(3) {
+  background-image: url(../images/icon-trand.png);
+  background-position: 50% 50%;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+}
+#container nav > div > div:nth-child(4) {
+  background-image: url(../images/icon-my-gallery.png);
+  background-position: 50% 50%;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
+}
+#container nav > div > div:nth-child(5) {
+  background-image: url(../images/icon-message.png);
+  background-position: 50% 50%;
+  background-size: 90% auto;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=mygallery-style.css.map */
