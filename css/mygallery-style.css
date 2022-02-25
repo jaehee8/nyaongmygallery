@@ -39,7 +39,7 @@ li {
     height: min-content;
     background-color: #fcf;
   }
-  #container main > section:nth-child(3) > .artwork-page1 {
+  #container main > section:nth-child(3) > .artwork-page {
     width: inherit;
     height: 53.3333vw;
     background-color: transparent;
@@ -62,7 +62,7 @@ li {
     height: min-content;
     background-color: #fcf;
   }
-  #container main > section:nth-child(3) > .artwork-page1 {
+  #container main > section:nth-child(3) > .artwork-page {
     width: inherit;
     height: 80vw;
     background-color: transparent;
@@ -85,7 +85,7 @@ li {
     height: min-content;
     background-color: #fcf;
   }
-  #container main > section:nth-child(3) > .artwork-page1 {
+  #container main > section:nth-child(3) > .artwork-page {
     width: 100vw;
     height: 133.3333vw;
     background-color: transparent;
@@ -298,16 +298,16 @@ li {
   height: min-content;
   background-color: #fff;
 }
-#container main section:nth-child(3) .artwork-page1 {
+#container main section:nth-child(3) .artwork-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
-#container main section:nth-child(3) .artwork-page1 > li {
+#container main section:nth-child(3) .artwork-page li {
   background-color: #cfc;
   margin-right: 0.5vw;
   margin-bottom: 0.5vw;
 }
-#container main section:nth-child(3) .artwork-page1 > li:nth-child(3n) {
+#container main section:nth-child(3) .artwork-page li:nth-child(3n) {
   margin-right: 0;
 }/*# sourceMappingURL=mygallery-style.css.map */

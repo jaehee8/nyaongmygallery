@@ -74,8 +74,9 @@
         </div>
 
       </section>
-      <section>
-        <ul class="artwork-page1">
+      <!-- 작품갤러리 -->
+      <section id="artwork-wrap">
+        <ul class="artwork-page">
           <li>1</li>
           <li>2</li>
           <li>3</li>
@@ -114,58 +115,20 @@
     }, 2000); //  로딩속도 구현
 
   })
-  
 
-  // const box = document.querySelectorAll('main .box');
-  // console.dir(box);
-  // const img = document.querySelector('.img');
 //size set
   function sizeSet(element, width, height, widthUnit, heightUnit) {
     element.style.width = width + widthUnit;
     element.style.height = height + heightUnit;
   }
-  //main안에 box size 셋팅
-  
-  // for(let i=0; i<box.length; i++) {
-  //   sizeSet(box[i], 100, 100, 'vw', 'vw');
-  //   console.log(box[0].style.width);
-  // };
-  // sizeSet(img, 100, 100, '%','%');
-  
-  // (function(){
-  //   const main = document.querySelector('main');
-  //   let count = main.children.length;
+/*
+  터치이벤트
+  ? touchstart  Y좌표값 인식
+  ? tuuchend  Y좌표값 인식 
 
-  //   const template = function(n) {
-  //     const docFrag = document.createDocumentFragment();
-  //     const div = document.createElement('div');
-  //     const img = document.createElement('div');
-  //     const text = document.createElement('div');
-
-  //     div.appendChild(img);
-  //     div.appendChild(text);
-  //     div.classList.add('box');
-  //     img.classList.add('img');
-  //     text.classList.add('text');
-  //     //?새로 생성된 요소에 사이즈가 적용되지 않는다.
-  //     docFrag.appendChild(div);
-  //     main.appendChild(docFrag);
-  //   };
-
-
-
-    //스크롤 바닥 감지
-    // window.onscroll = function(e) {
-    //   //window height + window scrollY 값이 document height보다 클 경우
-    //   if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-    //     count++;
-    //     template(count); //콘텐츠 추가
-    //     //여전히 비효율적으로 많은 div가 생성됨..악!
-    //   }
-    // };
-
-
-  // })();
+*/
+  const artworkWrap = document.querySelector('#artwork-wrap');
+  console.log(artworkWrap);
 
 
   

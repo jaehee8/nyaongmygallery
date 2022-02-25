@@ -80,7 +80,7 @@ li {
     & main {
       @include size(inherit, min-content, #fcf);
       & > section:nth-child(3) {
-        & > .artwork-page1 {
+        & > .artwork-page {
           @include size(inherit, 53.3333vw, transparent);
         }
       }
@@ -96,7 +96,7 @@ li {
     & main {
       @include size(inherit, min-content, #fcf);
       & > section:nth-child(3) {
-        & > .artwork-page1 {
+        & > .artwork-page {
           @include size(inherit, 80vw, transparent);
         }
       }
@@ -112,7 +112,7 @@ li {
     & main {
       @include size(inherit, min-content, #fcf);
       & > section:nth-child(3) {
-        & > .artwork-page1 {
+        & > .artwork-page {
           @include size(100vw, 133.3333vw, transparent);
         }
       }
@@ -251,18 +251,18 @@ li {
     & section:nth-child(3) {
       @include size(inherit, min-content, $color-1);
       // @include flex(center, center, row);
-      & .artwork-page1 {
+      & .artwork-page {
         // @include size(inherit, min-content, transparent);
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(4,1fr);
-        & > li {
+        & li {
           background-color: #cfc;
           margin-right: .5vw;
           margin-bottom: .5vw;
           // box-sizing: ;
         }
-        & > li:nth-child(3n) {
+        & li:nth-child(3n) {
           margin-right: 0;
         }
       }
