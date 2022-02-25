@@ -79,8 +79,8 @@ li {
     @include size(40vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
-      & > section:nth-child(3) {
-        & > .artwork-page {
+      & > section:nth-child(3) { //작품갤러리
+        & > .artwork-page { //작품사이즈
           @include size(inherit, 53.3333vw, transparent);
         }
       }
@@ -95,8 +95,8 @@ li {
     @include size(60vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
-      & > section:nth-child(3) {
-        & > .artwork-page {
+      & > section:nth-child(3) { //작품갤러리
+        & > .artwork-page {  //작품사이즈
           @include size(inherit, 80vw, transparent);
         }
       }
@@ -111,8 +111,8 @@ li {
     @include size(100vw, 100vh, $color-2);
     & main {
       @include size(inherit, min-content, #fcf);
-      & > section:nth-child(3) {
-        & > .artwork-page {
+      & > section:nth-child(3) { //작품갤러리
+        & > .artwork-page {  //작품사이즈
           @include size(100vw, 133.3333vw, transparent);
         }
       }
@@ -248,7 +248,7 @@ li {
       }
       
     }
-    & section:nth-child(3) {
+    & section:nth-child(3) { //작품갤러리
       @include size(inherit, min-content, $color-1);
       // @include flex(center, center, row);
       & .artwork-page {
@@ -256,7 +256,7 @@ li {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(4,1fr);
-        & li {
+        & li {   //작품
           background-color: #cfc;
           margin-right: .5vw;
           margin-bottom: .5vw;
