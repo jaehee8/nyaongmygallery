@@ -1,0 +1,67 @@
+@mixin flex-set($justify-content, $align-items, $direction) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $direction;
+}
+
+@mixin size-set($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// positioning
+
+body {
+  background-color: #333;
+}
+
+#container {
+  @include size-set(100vw, 100vh);
+  @include flex-set(center, center, row);
+
+  // * children section
+  section {
+    @include size-set(40vw, 80vh);
+    @include flex-set(center, center, row);
+    background-color: #222;
+    // ! test
+    color: #ccc;
+
+    // * children ul
+    ul {
+      // ? section size 와 동일하게 하기 위해 %처리
+      @include size-set(100%, 100%);
+      @include flex-set(center, center, row);
+      flex-wrap: wrap;
+
+      // ! test
+      border: 1px solid #ccc;
+
+      li {
+        //? <li> tag common attribute
+        @include size-set(calc(100%/3), calc(100%/4));
+        @include flex-set(center, center, row);
+        border: 1px solid #ccc;
+        color:#ddd;
+        background-color:salmon;
+      }
+    }
+
+  }
+
+
+}
