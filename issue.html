@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mobile shape</title>
+  <link rel="stylesheet" href="./issue-scss/issue.css">
+</head>
+
+<body>
+  <div id="container">
+    <section id="sect-wrap">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+      </ul>
+    </section>
+  </div>
+  <script>
+    const sectWrap = document.querySelector("#sect-wrap");
+    console.log(sectWrap.offsetHeight);
+    // ? sectWrap.offsetHeight : section의 전체 높이값
+
+
+    
+    let startValue = 0;
+    let endValue = 0;
+    window.addEventListener("load", function () {
+      this.addEventListener("touchstart", function (event) {
+        // console.log(event.changedTouches[0].pageY);
+        startValue = event.changedTouches[0].pageY;
+        console.log("터치 시작은 : " + startValue);
+     
+        // console.log(this);
+        this.addEventListener("touchend", function (event) {
+          // console.log(event.changedTouches[0].pageY);
+          endValue = event.changedTouches[0].pageY;
+          console.log("터치 끝은 : " + endValue);
+        });
+        if(startValue !==0 && endValue !==0) {
+          console.log('action ready');
+          if(startValue > endValue) {
+            console.log('손이 올라갔어요');
+          } else {
+            console.log('손이 내려갔어요');
+          }
+        } 
+      });
+    });
+  </script>
+</body>
+
+</html>
