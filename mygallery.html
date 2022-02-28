@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="./css/mygallery-style.css">
   <link rel="shortcut icon" href="./nyong-favicon.ico" type="image/x-icon">
 </head>
+
 <body>
   <div id="loading">
     <div></div>
@@ -15,7 +17,7 @@
   <div id="container">
     <header>
       <div>
-        <div> 
+        <div>
           <!-- 이전버튼 -->
           <a href="https://jaehee8.github.io/nyaongmain/"></a>
           <!-- 프로필이미지 -->
@@ -92,7 +94,7 @@
         </ul>
       </section>
     </main>
-    
+
   </div>
 </body>
 
@@ -102,37 +104,37 @@
 
   html.style.overflow = 'hidden'; //로딩 중 스크롤 방지
 
-  window.addEventListener('load', ()=>{
+  window.addEventListener('load', () => {
 
     setTimeout(() => { // 로딩속도 구현
-    
+
       loader.style.opacity = '0';
-		  html.style.overflow = 'auto'; //스크롤 방지 해제
+      html.style.overflow = 'auto'; //스크롤 방지 해제
       setTimeout(() => {
         loader.style.display = 'none';
       }, 400);
-        
+
     }, 2000); //  로딩속도 구현
 
   })
 
-//size set
+  //size set
   function sizeSet(element, width, height, widthUnit, heightUnit) {
     element.style.width = width + widthUnit;
     element.style.height = height + heightUnit;
   }
-/*
-  scroll 이벤트로 해보기
+  /*
+    scroll 이벤트로 해보기
 
-*/
+  */
   const content = document.querySelector('#container');
   const artworkWrap = document.querySelector('#artwork-wrap');
-  console.log(artworkWrap);
+  // console.log(artworkWrap);
   //더해줄 컨텐츠
   const more = () => {
     const ul = document.createElement('ul');
     ul.classList.add('artwork-page');
-    for(let i=0; i<12; i++) {
+    for (let i = 0; i < 12; i++) {
       const li = document.createElement('li');
 
       ul.appendChild(li);
@@ -140,23 +142,73 @@
     artworkWrap.appendChild(ul);
   }
 
-  
-  window.addEventListener('scroll',() => {
-    console.log(window.scrollY);
-    console.log(artworkWrap.offsetHeight);
-    console.log(content.offsetHeight);
-    
-  });
-  // 원래 콘텐츠 크기에 스크롤y값을 더해서 컨텐츠 크기보다 커지면 실행
-  if(artworkWrap.offsetHeight + window.scrollY + 220 > content.offsetHeight) {
-    artworkWrap.addEventListener("scroll", more, false);
-  } else {
-    artworkWrap.attachEvent("onscroll", more);
-  }
-  
 
+  // window.addEventListener('scroll',() => {
+  //   console.log(window.scrollY);
+  //   console.log(artworkWrap.offsetHeight);
+  //   console.log(content.offsetHeight);
+
+  // });
+  // 원래 콘텐츠 크기에 스크롤y값을 더해서 컨텐츠 크기보다 커지면 실행
+  // if(artworkWrap.offsetHeight + window.scrollY + 220 > content.offsetHeight) {
+  //   artworkWrap.addEventListener("scroll", more, false);
+  // } else {
+  // artworkWrap.attachEvent("onscroll", more);
+  // 
+
+  // console.log(`content.offset: ${content.offsetHeight}`);
+  // console.log(`artworkWrap.offsetHeight: ${artworkWrap.offsetHeight}`);
+  // console.log(`window.scrollY: ${window.scrollY}`);
+
+  // ? window.scrollY의 값이 더이상 증가하지 않으면 = 맨 끝
+  // ? 이벤트 이전과 이벤트 다음과의 비교에서 이벤트 다음이 항상 커지면 "아무일도 안일어남"
+  // ? 이벤트 이전과 이벤트 다음이 변화가 없다면 이벤트 발생
+
+  // let current = 0;
+  // window.addEventListener('scroll', () => {
+  //   current++;
+  //   console.log(`current ${current}`);
+  // });
+
+
+window.addEventListener('load', () => {
+
+  let touchstart = 0;
+  window.addEventListener('touchstart', (event) => {
+    touchstart = event.changedTouches[0].clientY;
+    console.dir("눌렀을때 높이값" + event.changedTouches[0].clientY);
+    
+    console.log('touchstart');
+    if(touchstart < touchend) {
+    console.log('당신은 터치를 내렸습니다.');
+  } else {
+    console.log('당신은 터치를 올렸습니다.');
+  }
+  });
   
+  let touchend = 0;
+  window.addEventListener('touchend', (event) => {
+    touchend = event.changedTouches[0].clientY;
+    console.dir("똇을때 높이값" + event.changedTouches[0].clientY);
+    console.log('touchend');
+    if(touchstart < touchend) {
+    console.log('당신은 터치를 내렸습니다.');
+  } else {
+    console.log('당신은 터치를 올렸습니다.');
+  }
+  });
   
+  if(touchstart < touchend) {
+    console.log('당신은 터치를 내렸습니다.');
+  } else {
+    console.log('당신은 터치를 올렸습니다.');
+  }
+
+
+});
+
+
 
 </script>
+
 </html>
