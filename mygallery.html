@@ -122,18 +122,39 @@
     element.style.height = height + heightUnit;
   }
 /*
-  터치이벤트
-  ? touchstart  Y좌표값 인식
-  ? tuuchend  Y좌표값 인식
-  ? start y좌표가 end y좌표보다 작으면 실행(?)시켜줘
-  ?   (?)-> artwork-wrap 의 자식 ul을 추가해줘
-  ?         ul의 자식으로 li 12개를  추가해줘 
+  scroll 이벤트로 해보기
 
 */
+  const content = document.querySelector('#container');
   const artworkWrap = document.querySelector('#artwork-wrap');
   console.log(artworkWrap);
+  //더해줄 컨텐츠
+  const more = () => {
+    const ul = document.createElement('ul');
+    ul.classList.add('artwork-page');
+    for(let i=0; i<12; i++) {
+      const li = document.createElement('li');
+
+      ul.appendChild(li);
+    }
+    artworkWrap.appendChild(ul);
+  }
 
   
+  window.addEventListener('scroll',() => {
+    console.log(window.scrollY);
+    console.log(artworkWrap.offsetHeight);
+    console.log(content.offsetHeight);
+    
+  });
+  // 원래 콘텐츠 크기에 스크롤y값을 더해서 컨텐츠 크기보다 커지면 실행
+  if(artworkWrap.offsetHeight + window.scrollY + 220 > content.offsetHeight) {
+    artworkWrap.addEventListener("scroll", more, false);
+  } else {
+    artworkWrap.attachEvent("onscroll", more);
+  }
+  
+
   
   
 
