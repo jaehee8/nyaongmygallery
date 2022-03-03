@@ -124,8 +124,7 @@
     element.style.height = height + heightUnit;
   }
   /*
-    scroll 이벤트로 해보기
-
+  이벤튼 한번 발생할때 세번쨰section #artwork-wrap 안에 만들어지는  ul과 li
   */
   const content = document.querySelector('#container');
   const artworkWrap = document.querySelector('#artwork-wrap');
@@ -143,69 +142,75 @@
   }
 
 
-  // window.addEventListener('scroll',() => {
-  //   console.log(window.scrollY);
-  //   console.log(artworkWrap.offsetHeight);
-  //   console.log(content.offsetHeight);
-
-  // });
-  // 원래 콘텐츠 크기에 스크롤y값을 더해서 컨텐츠 크기보다 커지면 실행
-  // if(artworkWrap.offsetHeight + window.scrollY + 220 > content.offsetHeight) {
-  //   artworkWrap.addEventListener("scroll", more, false);
-  // } else {
-  // artworkWrap.attachEvent("onscroll", more);
-  // 
-
-  // console.log(`content.offset: ${content.offsetHeight}`);
-  // console.log(`artworkWrap.offsetHeight: ${artworkWrap.offsetHeight}`);
-  // console.log(`window.scrollY: ${window.scrollY}`);
 
   // ? window.scrollY의 값이 더이상 증가하지 않으면 = 맨 끝
   // ? 이벤트 이전과 이벤트 다음과의 비교에서 이벤트 다음이 항상 커지면 "아무일도 안일어남"
   // ? 이벤트 이전과 이벤트 다음이 변화가 없다면 이벤트 발생
 
-  // let current = 0;
-  // window.addEventListener('scroll', () => {
-  //   current++;
-  //   console.log(`current ${current}`);
-  // });
 
+  let startValue = 0;
+  let endValue = 0;
+  window.addEventListener("load", function() {
+    this.addEventListener("touchstart", function(event) {
+      // console.log(event.changedTouches[0].pageY);
+      startValue = event.changedTouches[0].pageY;
+      console.log('터치시작'+ startValue);
 
-window.addEventListener('load', () => {
+      // console.log(this);
+      this.addEventListener("touchend", function(event) {
+        // console.log(event.changedTouches[0].pageY);
+        endValue = event.changedTouches[0].pageY;
+        console.log('터치끝'+ endValue);
+      });
+      if(startValue !==0 && endValue !==0) {
+        console.log('ready');
+        if(startValue > endValue) {
+          console.log('밑으로');
+          //이베트발생
+          more();
+          
+        }else {
+          console.log('위로');
+        }
+      }
+    });
+  });
 
-  let touchstart = 0;
-  window.addEventListener('touchstart', (event) => {
-    touchstart = event.changedTouches[0].clientY;
-    console.dir("눌렀을때 높이값" + event.changedTouches[0].clientY);
+// window.addEventListener('load', () => {
+
+//   let touchstart = 0;
+//   window.addEventListener('touchstart', (event) => {
+//     touchstart = event.changedTouches[0].clientY;
+//     console.dir("눌렀을때 높이값" + event.changedTouches[0].clientY);
     
-    console.log('touchstart');
-    if(touchstart < touchend) {
-    console.log('당신은 터치를 내렸습니다.');
-  } else {
-    console.log('당신은 터치를 올렸습니다.');
-  }
-  });
+//     console.log('touchstart');
+//     if(touchstart < touchend) {
+//     console.log('당신은 터치를 내렸습니다.');
+//   } else {
+//     console.log('당신은 터치를 올렸습니다.');
+//   }
+//   });
   
-  let touchend = 0;
-  window.addEventListener('touchend', (event) => {
-    touchend = event.changedTouches[0].clientY;
-    console.dir("똇을때 높이값" + event.changedTouches[0].clientY);
-    console.log('touchend');
-    if(touchstart < touchend) {
-    console.log('당신은 터치를 내렸습니다.');
-  } else {
-    console.log('당신은 터치를 올렸습니다.');
-  }
-  });
+//   let touchend = 0;
+//   window.addEventListener('touchend', (event) => {
+//     touchend = event.changedTouches[0].clientY;
+//     console.dir("똇을때 높이값" + event.changedTouches[0].clientY);
+//     console.log('touchend');
+//     if(touchstart < touchend) {
+//     console.log('당신은 터치를 내렸습니다.');
+//   } else {
+//     console.log('당신은 터치를 올렸습니다.');
+//   }
+//   });
   
-  if(touchstart < touchend) {
-    console.log('당신은 터치를 내렸습니다.');
-  } else {
-    console.log('당신은 터치를 올렸습니다.');
-  }
+//   if(touchstart < touchend) {
+//     console.log('당신은 터치를 내렸습니다.');
+//   } else {
+//     console.log('당신은 터치를 올렸습니다.');
+//   }
 
 
-});
+// });
 
 
 
