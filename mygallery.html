@@ -143,11 +143,6 @@
 
 
 
-  // ? window.scrollY의 값이 더이상 증가하지 않으면 = 맨 끝
-  // ? 이벤트 이전과 이벤트 다음과의 비교에서 이벤트 다음이 항상 커지면 "아무일도 안일어남"
-  // ? 이벤트 이전과 이벤트 다음이 변화가 없다면 이벤트 발생
-
-
   let startValue = 0;
   let endValue = 0;
   window.addEventListener("load", function() {
@@ -176,6 +171,10 @@
     });
   });
 
+
+// ? window.scrollY의 값이 더이상 증가하지 않으면 = 맨 끝
+// ? 이벤트 이전과 이벤트 다음과의 비교에서 이벤트 다음이 항상 커지면 "아무일도 안일어남"
+// ? 이벤트 이전과 이벤트 다음이 변화가 없다면 이벤트 발생
 // window.addEventListener('load', () => {
 
 //   let touchstart = 0;
