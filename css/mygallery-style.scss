@@ -269,14 +269,56 @@ li {
           background-color: #cfc;
           margin-right: .5vw;
           margin-bottom: .5vw;
+          @include flex(center, center, row);
+          & > div {
+            @include size(50%, 50%, rgba(255,255,255,.5));
+            @include img(url(../images/tag-soldout.png));
+            background-size: 50% auto;
+            border-radius: 50%;
+          }
         }
         & > li:nth-child(3n) { //오른쪽 여백없앨 3번째 작품들
           margin-right: 0;
         }
       }
       & > ul:nth-child(1){
+
         & > li:nth-child(1){
+          @include img(url(../images/Pepe_shimada2.jpg));
+        }
+        & > li:nth-child(2){
           @include img(url(../images/Pepe_shimada1.jpg));
+        }
+        & > li:nth-child(3){
+          @include img(url(../images/Pepe_shimada6.jpg));
+        }
+        & > li:nth-child(4){
+          @include img(url(../images/Pepe_shimada4.jpg));
+        }
+        & > li:nth-child(5){
+          @include img(url(../images/Pepe_shimada5.jpg));
+        }
+        & > li:nth-child(6){
+          @include img(url(../images/Pepe_shimada3.jpeg));
+        }
+        & > li:nth-child(7){
+          @include img(url(../images/Pepe_shimada7.jpg));
+        }
+        & > li:nth-child(8){
+          @include img(url(../images/Pepe_shimada10.jpg));
+        }
+        & > li:nth-child(9){
+          @include img(url(../images/Pepe_shimada9.jpg));
+        }
+        & > li:nth-child(10){
+          @include img(url(../images/Pepe_shimada14.jpg));
+        }
+        & > li:nth-child(11){
+          @include img(url(../images/Pepe_shimada15.jpg));
+        }
+        & > li:nth-child(12){
+          @include img(url(../images/Pepe_shimada11.jpg));
+          background-size: 105% auto;
         }
       }
     }

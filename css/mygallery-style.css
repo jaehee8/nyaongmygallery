@@ -320,13 +320,95 @@ li {
   background-color: #cfc;
   margin-right: 0.5vw;
   margin-bottom: 0.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#container main section:nth-child(3) > ul > li > div {
+  width: 50%;
+  height: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-image: url(../images/tag-soldout.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 50% auto;
+  border-radius: 50%;
 }
 #container main section:nth-child(3) > ul > li:nth-child(3n) {
   margin-right: 0;
 }
 #container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(1) {
+  background-image: url(../images/Pepe_shimada2.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(2) {
   background-image: url(../images/Pepe_shimada1.jpg);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(3) {
+  background-image: url(../images/Pepe_shimada6.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(4) {
+  background-image: url(../images/Pepe_shimada4.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(5) {
+  background-image: url(../images/Pepe_shimada5.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(6) {
+  background-image: url(../images/Pepe_shimada3.jpeg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(7) {
+  background-image: url(../images/Pepe_shimada7.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(8) {
+  background-image: url(../images/Pepe_shimada10.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(9) {
+  background-image: url(../images/Pepe_shimada9.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(10) {
+  background-image: url(../images/Pepe_shimada14.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(11) {
+  background-image: url(../images/Pepe_shimada15.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(12) {
+  background-image: url(../images/Pepe_shimada11.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 105% auto;
 }/*# sourceMappingURL=mygallery-style.css.map */
