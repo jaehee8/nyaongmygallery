@@ -175,10 +175,21 @@ li {
       & > div {
         @include size(5vh, 5vh, $color-1);
         border-radius: 50%;
-        // border: 1px solid red;
+        & > a {
+          @include size(100%, 100%, transparent);
+          border-radius: 50%;
+        }
       }
       & > div:nth-child(1) { //홈
-        @include navimg(url(../images/icon-home.png));
+        & > a {
+          @include navimg(url(../images/icon-home.png));
+        }
+      }
+      & > div:nth-child(1):hover { //홈에 마우스댔을때
+        & > a {
+          @include navimg(url(../images/hover-icon-home.png));
+          background-color: $color-6;
+        }
       }
       & > div:nth-child(2) { //팔로우
         @include navimg(url(../images/icon-follow.png));
