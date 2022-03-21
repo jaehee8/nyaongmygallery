@@ -261,17 +261,22 @@ li {
     }
     & section:nth-child(3) { //작품갤러리
       @include size(inherit, min-content, $color-1);
-      & .artwork-page {
+      & > ul {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(4,1fr);
-        & li {   //작품
+        & > li {   //작품
           background-color: #cfc;
           margin-right: .5vw;
           margin-bottom: .5vw;
         }
-        & li:nth-child(3n) { //오른쪽 여백없앨 3번째 작품들
+        & > li:nth-child(3n) { //오른쪽 여백없앨 3번째 작품들
           margin-right: 0;
+        }
+      }
+      & > ul:nth-child(1){
+        & > li:nth-child(1){
+          @include img(url(../images/Pepe_shimada1.jpg));
         }
       }
     }

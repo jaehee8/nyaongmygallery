@@ -311,16 +311,22 @@ li {
   height: min-content;
   background-color: #fff;
 }
-#container main section:nth-child(3) .artwork-page {
+#container main section:nth-child(3) > ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
 }
-#container main section:nth-child(3) .artwork-page li {
+#container main section:nth-child(3) > ul > li {
   background-color: #cfc;
   margin-right: 0.5vw;
   margin-bottom: 0.5vw;
 }
-#container main section:nth-child(3) .artwork-page li:nth-child(3n) {
+#container main section:nth-child(3) > ul > li:nth-child(3n) {
   margin-right: 0;
+}
+#container main section:nth-child(3) > ul:nth-child(1) > li:nth-child(1) {
+  background-image: url(../images/Pepe_shimada1.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=mygallery-style.css.map */
