@@ -129,6 +129,7 @@ $height-2 :7vh;
 }
 
 #container {
+  padding-top: $height-1;
   & header {
     @include size(inherit, $height-1, $color-1);
     @include flex(center, center, row);
@@ -220,7 +221,7 @@ $height-2 :7vh;
       @include size(inherit, 12vh, $color-1);
       @include flex(center, center, transparent);
       // border: 1px solid red;
-      margin-top: $height-1;
+      
       & > ul {
         @include size(45%, min-content, transparent);
         @include flex(space-between, center, row);

@@ -93,6 +93,9 @@ li {
     background-color: transparent;
   }
 }
+#container {
+  padding-top: 7vh;
+}
 #container header {
   width: inherit;
   height: 7vh;
@@ -240,7 +243,6 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: transparent;
-  margin-top: 7vh;
 }
 #container main section:nth-child(1) > ul {
   width: 45%;
