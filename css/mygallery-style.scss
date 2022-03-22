@@ -244,7 +244,8 @@ $height-2 :7vh;
         }
         & li:nth-child(2) { //솔드아웃
           & a {
-            @include img(url(../images/soldout.png));
+            @include img(url(../images/tag-soldout.png));
+            background-size: 60% auto;
           }
         }
         & li:nth-child(3) { //팔로워
@@ -265,7 +266,7 @@ $height-2 :7vh;
           color: $color-6;
           font-size: 1em;
           font-weight: 200;
-          margin: 1vh 0;
+          margin: 3vh 0;
         }
       }
       
@@ -282,7 +283,7 @@ $height-2 :7vh;
           margin-bottom: .5vw;
           @include flex(center, center, row);
           & > div {
-            @include size(50%, 50%, rgba(255,255,255,.5));
+            @include size(40%, 40%, rgba(255,255,255,.8));
             @include img(url(../images/tag-soldout.png));
             background-size: 50% auto;
             border-radius: 50%;

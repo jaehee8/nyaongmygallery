@@ -276,10 +276,11 @@ li {
   background-repeat: no-repeat;
 }
 #container main section:nth-child(1) > ul li:nth-child(2) a {
-  background-image: url(../images/soldout.png);
+  background-image: url(../images/tag-soldout.png);
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  background-size: 60% auto;
 }
 #container main section:nth-child(1) > ul li:nth-child(3) a {
   background-image: url(../images/follower.png);
@@ -308,7 +309,7 @@ li {
   color: #333;
   font-size: 1em;
   font-weight: 200;
-  margin: 1vh 0;
+  margin: 3vh 0;
 }
 #container main section:nth-child(3) {
   width: inherit;
@@ -332,9 +333,9 @@ li {
   flex-direction: row;
 }
 #container main section:nth-child(3) > ul > li > div {
-  width: 50%;
-  height: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  width: 40%;
+  height: 40%;
+  background-color: rgba(255, 255, 255, 0.8);
   background-image: url(../images/tag-soldout.png);
   background-position: 50% 50%;
   background-size: cover;
