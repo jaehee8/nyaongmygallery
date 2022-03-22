@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,11 +6,12 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: #484848;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 a {
@@ -299,10 +301,12 @@ li {
   height: 100%;
   background-color: transparent;
 }
-#container main section:nth-child(2) > div pre {
+#container main section:nth-child(2) > div > p {
+  display: block;
   color: #333;
   font-size: 1em;
-  padding: 1vh 0 5vh 0;
+  font-weight: 200;
+  margin: 1vh 0;
 }
 #container main section:nth-child(3) {
   width: inherit;
